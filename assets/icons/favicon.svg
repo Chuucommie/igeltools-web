@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="64" height="64" role="img" aria-label="IgelTools">
+  <rect width="48" height="48" rx="11" fill="#216de7"/>
+  <path d="M8 34 C8 23 14.5 15 23 15 C29 15 34 18.5 37 23 L42.2 26 C43.7 26.8 43.7 29 42.1 29.8 L36.3 32.8 C32.8 35.7 27.4 37 21 37 L9.9 37 C8.85 37 8 36.15 8 35.1 Z" fill="#f2e7cf"/>
+  <circle cx="35.6" cy="26.6" r="1.7" fill="#216de7"/>
+</svg>

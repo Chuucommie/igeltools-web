@@ -1,0 +1,8 @@
+# App source checkouts, kept next to the site but not part of it.
+IgelTVRemote/
+IgelNotes/
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.swp
