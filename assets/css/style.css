@@ -1,6 +1,6 @@
 /* ==========================================================================
    IgelTools — site stylesheet
-   Palette taken from the Igel TVRemote icon: field blue, cream, ink.
+   Ink and cream, the IgelTools field green as brand accent, one colour per app.
    No dependencies, no build step.
    ========================================================================== */
 
@@ -14,8 +14,10 @@
   --ink-2: #c2baa7;
   --ink-3: #8b8a84;
 
-  --blue: #216de7;         /* the icon's field blue */
+  --blue: #216de7;         /* Igel TVRemote field blue */
   --blue-bright: #5c97ff;
+  --green: #568058;        /* IgelTools field green */
+  --green-bright: #9cc3a0;
   --ink-on-paper: #22262d;
 
   --line: rgba(242, 231, 207, 0.11);
@@ -66,12 +68,12 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; }
 
 ::selection {
-  background: var(--blue);
+  background: var(--green);
   color: #fff;
 }
 
 :focus-visible {
-  outline: 2px solid var(--blue-bright);
+  outline: 2px solid var(--green-bright);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -115,7 +117,7 @@ button { font: inherit; color: inherit; }
   color: var(--ink-3);
   margin-bottom: 1.5rem;
 }
-.eyebrow .num { color: var(--blue-bright); }
+.eyebrow .num { color: var(--green-bright); }
 .eyebrow::after {
   content: "";
   flex: 1;
@@ -142,7 +144,7 @@ button { font: inherit; color: inherit; }
   display: inline-block;
   flex: none;
 }
-.dot-live { background: var(--blue-bright); box-shadow: 0 0 0 4px rgba(92, 151, 255, 0.14); }
+.dot-live { background: var(--green-bright); box-shadow: 0 0 0 4px rgba(156, 195, 160, 0.14); }
 
 /* ---------- buttons ---------- */
 
@@ -168,10 +170,10 @@ button { font: inherit; color: inherit; }
 .btn-primary:hover { background: #fffaf0; }
 
 .btn-ghost { border-color: var(--line-strong); color: var(--ink); }
-.btn-ghost:hover { border-color: rgba(92, 151, 255, 0.55); background: rgba(92, 151, 255, 0.08); }
+.btn-ghost:hover { border-color: rgba(156, 195, 160, 0.55); background: rgba(156, 195, 160, 0.08); }
 
-.btn-blue { background: var(--blue); color: #fff; }
-.btn-blue:hover { background: #2f7bf5; }
+.btn-green { background: var(--green); color: #fff; }
+.btn-green:hover { background: #649165; }
 
 .btn-sm { padding: 0.52rem 1rem; font-size: 0.85rem; }
 .btn-block { width: 100%; }
@@ -187,7 +189,7 @@ button { font: inherit; color: inherit; }
   padding-bottom: 3px;
   transition: color 0.18s ease, border-color 0.18s ease;
 }
-.link-quiet:hover { color: var(--ink); border-color: var(--blue-bright); }
+.link-quiet:hover { color: var(--ink); border-color: var(--green-bright); }
 
 /* ---------- header ---------- */
 
@@ -315,7 +317,7 @@ button { font: inherit; color: inherit; }
 .glow {
   position: absolute;
   inset: -12% -6%;
-  background: radial-gradient(circle at 50% 45%, rgba(33, 109, 231, 0.42), transparent 62%);
+  background: radial-gradient(circle at 50% 45%, rgba(86, 128, 88, 0.55), transparent 62%);
   filter: blur(6px);
   z-index: 0;
 }
@@ -384,25 +386,36 @@ button { font: inherit; color: inherit; }
   padding: clamp(24px, 3.4vw, 40px);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background:
-    radial-gradient(120% 130% at 0% 0%, rgba(33, 109, 231, 0.13), transparent 58%),
-    linear-gradient(180deg, var(--surface), var(--bg-soft));
+  background: linear-gradient(180deg, var(--surface), var(--bg-soft));
 }
 .app-card:hover { border-color: var(--line-strong); }
 .app-card + .app-card { margin-top: 1rem; }
 
-.app-card--notes {
+.app-card--remote {
   background:
-    radial-gradient(120% 130% at 0% 0%, rgba(91, 131, 96, 0.22), transparent 58%),
+    radial-gradient(120% 130% at 0% 0%, rgba(33, 109, 231, 0.13), transparent 58%),
     linear-gradient(180deg, var(--surface), var(--bg-soft));
 }
-.app-card--notes .app-kicker { color: #9cc3a0; }
-.app-card--notes .badge {
-  border-color: rgba(156, 195, 160, 0.35);
-  background: rgba(156, 195, 160, 0.09);
+.app-card--remote .app-kicker { color: var(--blue-bright); }
+.app-card--remote .badge {
+  border-color: rgba(92, 151, 255, 0.35);
+  background: rgba(92, 151, 255, 0.09);
 }
-.app-card--notes .status-list li.is-on { border-color: rgba(156, 195, 160, 0.32); }
-.app-card--notes .status-list li.is-on span { color: #9cc3a0; }
+.app-card--remote .status-list li.is-on { border-color: rgba(92, 151, 255, 0.32); }
+.app-card--remote .status-list li.is-on span { color: var(--blue-bright); }
+
+.app-card--notes {
+  background:
+    radial-gradient(120% 130% at 0% 0%, rgba(84, 48, 92, 0.34), transparent 58%),
+    linear-gradient(180deg, var(--surface), var(--bg-soft));
+}
+.app-card--notes .app-kicker { color: #c9a4d6; }
+.app-card--notes .badge {
+  border-color: rgba(201, 164, 214, 0.35);
+  background: rgba(201, 164, 214, 0.09);
+}
+.app-card--notes .status-list li.is-on { border-color: rgba(201, 164, 214, 0.32); }
+.app-card--notes .status-list li.is-on span { color: #c9a4d6; }
 
 .app-card--server {
   background:
@@ -443,7 +456,7 @@ code {
   font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--blue-bright);
+  color: var(--green-bright);
   margin-bottom: 0.6rem;
 }
 .app-title { font-size: clamp(1.55rem, 2.6vw, 2.05rem); margin-bottom: 0.7rem; }
@@ -455,9 +468,9 @@ code {
   gap: 0.5rem;
   align-self: start;
   padding: 0.35rem 0.75rem 0.35rem 0.6rem;
-  border: 1px solid rgba(92, 151, 255, 0.35);
+  border: 1px solid rgba(156, 195, 160, 0.35);
   border-radius: 999px;
-  background: rgba(92, 151, 255, 0.09);
+  background: rgba(156, 195, 160, 0.09);
   font-family: var(--mono);
   font-size: 0.66rem;
   letter-spacing: 0.1em;
@@ -499,8 +512,8 @@ code {
   text-transform: uppercase;
   opacity: 0.85;
 }
-.status-list li.is-on { color: var(--ink); border-color: rgba(92, 151, 255, 0.32); }
-.status-list li.is-on span { color: var(--blue-bright); }
+.status-list li.is-on { color: var(--ink); border-color: rgba(156, 195, 160, 0.32); }
+.status-list li.is-on span { color: var(--green-bright); }
 
 .ghost-grid {
   display: grid;
@@ -548,7 +561,7 @@ code {
   font-family: var(--mono);
   font-size: 0.68rem;
   letter-spacing: 0.14em;
-  color: var(--blue-bright);
+  color: var(--green-bright);
   display: block;
   margin-bottom: 0.9rem;
 }
@@ -614,8 +627,8 @@ code {
 }
 .roadmap-row.is-now .roadmap-state {
   color: var(--ink);
-  border-color: rgba(92, 151, 255, 0.4);
-  background: rgba(92, 151, 255, 0.1);
+  border-color: rgba(156, 195, 160, 0.4);
+  background: rgba(156, 195, 160, 0.1);
 }
 
 /* ---------- cta ---------- */
@@ -632,7 +645,7 @@ code {
   border-radius: 26px;
   overflow: hidden;
   background:
-    radial-gradient(90% 160% at 12% 0%, rgba(33, 109, 231, 0.28), transparent 60%),
+    radial-gradient(90% 160% at 12% 0%, rgba(86, 128, 88, 0.34), transparent 60%),
     linear-gradient(180deg, var(--surface-2), var(--bg-soft));
 }
 .cta-icon {
@@ -719,7 +732,7 @@ code {
   aspect-ratio: 1;
   border-radius: 23%;
   border: 1px solid var(--line-strong);
-  box-shadow: 0 40px 80px -34px rgba(0, 0, 0, 0.9), 0 0 90px -30px rgba(33, 109, 231, 0.8);
+  box-shadow: 0 40px 80px -34px rgba(0, 0, 0, 0.9), 0 0 90px -30px rgba(86, 128, 88, 0.8);
 }
 .app-hero-body h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); margin-block: 0.5rem 0.9rem; }
 .app-hero-body .lede { max-width: 52ch; }
@@ -743,7 +756,7 @@ code {
   font-family: var(--mono);
   font-size: 0.66rem;
   letter-spacing: 0.14em;
-  color: var(--blue-bright);
+  color: var(--green-bright);
   display: block;
   margin-bottom: 0.8rem;
 }
@@ -774,8 +787,8 @@ code {
   gap: 0.85rem;
   align-items: flex-start;
   padding: 1rem 1.2rem;
-  border: 1px solid rgba(92, 151, 255, 0.28);
-  background: rgba(33, 109, 231, 0.08);
+  border: 1px solid rgba(156, 195, 160, 0.3);
+  background: rgba(86, 128, 88, 0.14);
   border-radius: 14px;
   font-size: 0.9rem;
   color: var(--ink-2);

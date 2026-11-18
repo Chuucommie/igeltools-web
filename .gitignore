@@ -3,6 +3,9 @@ IgelTVRemote/
 IgelNotes/
 ServerManager/
 
+# Local preview of the GitHub profile README
+_profile/
+
 # Editor and OS noise
 .DS_Store
 Thumbs.db

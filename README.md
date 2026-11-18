@@ -65,8 +65,8 @@ three steps turn it into a web asset:
 
 ```sh
 # 1. flood fill the dark matte with the icon's own field colour
-#    (purple #401A43 for IgelTools, green #5B8360 for IgelNotes, slate #385269 for IgelServer)
-magick source.jpg -fuzz 18% -fill '#401A43' \
+#    (green #568058 for IgelTools, purple #54305C for IgelNotes, slate #385269 for IgelServer)
+magick source.jpg -fuzz 18% -fill '#568058' \
   -draw 'color 0,0 floodfill' -draw 'color 2047,0 floodfill' \
   -draw 'color 0,2047 floodfill' -draw 'color 2047,2047 floodfill' \
   -shave 20x20 +repage flat.png
@@ -98,8 +98,9 @@ app repositories is untouched — the source PNGs there predate these images.
 ## Design notes
 
 - Palette: ink background, cream text, and one accent per app — blue `#216DE7`
-  (TVRemote), green `#5B8360` (Notes), slate `#385269` (Server), purple
-  `#401A43` (IgelTools).
+  (TVRemote), purple `#54305C` (Notes), slate `#385269` (Server), green
+  `#568058` (IgelTools). Green is also the site-wide brand accent (selection,
+  live dots, buttons, glows); the ink surfaces stay as they are.
 - The wordmark is set in a system serif to sit with the engraved artwork; the
   rest of the site stays in the system sans and mono.
 - Type is system stacks only, so the site has no network dependencies.
