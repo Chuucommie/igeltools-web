@@ -3,15 +3,20 @@
 Static marketing site for IgelTools. No build step, no dependencies: open
 `index.html` in a browser or serve the folder as-is.
 
+Live at <https://chuucommie.github.io/igeltools-web/>.
+
 ```
 index.html                 landing page
 404.html                   not found page (GitHub Pages picks it up)
-apps/igeltvremote.html     Igel TVRemote app page
+apps/igeltvremote.html     Igel TVRemote
+apps/igelnotes.html        IgelNotes
+apps/igelserver.html       IgelServer
 assets/css/style.css       all styles (design tokens at the top)
 assets/js/main.js          nav toggle, scroll reveal, footer year
-assets/icons/              app icons (1024/512/256) + brand mark + favicon
+assets/icons/              brand icon + three app icons (1024/512/256, 64 for the favicon)
 IgelTVRemote/              app source checkout (not part of the site)
 IgelNotes/                 app source checkout (not part of the site)
+ServerManager/             app source checkout for IgelServer (not part of the site)
 ```
 
 ## Preview locally
@@ -24,8 +29,7 @@ Then open <http://localhost:8000>.
 
 ## Deploy
 
-Live at **<https://chuucommie.github.io/igeltools-web/>**, from
-`Chuucommie/igeltools-web` (public) on the `main` branch, root folder, built by
+Live from `Chuucommie/igeltools-web` (public) on `main`, root folder, built by
 GitHub Pages directly — no Actions workflow.
 
 ```sh
@@ -34,54 +38,68 @@ git commit -m "…"
 git -c credential.helper='!gh auth git-credential' push
 ```
 
-`.nojekyll` is in place so Pages serves the files as they are. `404.html` is
-served for unknown paths; it uses `<base href="/igeltools-web/">` so relative
-asset URLs resolve from the project root at any depth — change that one line if
-the site ever moves to a custom domain.
+`.nojekyll` keeps Pages from running Jekyll. `404.html` uses
+`<base href="/igeltools-web/">` so relative asset URLs resolve from the project
+root at any depth — change that one line if the site moves to a custom domain.
 
-The two app folders stay out of the repository via `.gitignore`. Do not upload
-this folder to a host that ignores `.gitignore` (Netlify or Cloudflare
-drag-and-drop), or the private app source goes public.
+The three app folders stay out of the repository through `.gitignore`. Do not
+upload this folder to a host that ignores `.gitignore` (Netlify or Cloudflare
+drag-and-drop), or the private source of the apps goes public.
 
 ## Where the content comes from
 
-Copy and technical claims are taken from the app repository in `IgelTVRemote/`:
+| Page | Sources |
+| --- | --- |
+| Igel TVRemote | `IgelTVRemote/README.md`, `appStore/listing-en.md`, `appStore/privacy-policy.md` |
+| IgelNotes | `IgelNotes/DEVELOPMENT_PLAN.md` plus the `Views/`, `Services/`, `Intents/` and `Networking/` folders |
+| IgelServer | `ServerManager/README.md`, `SECURITY.md`, `docs/` |
 
-- `README.md` — protocols, discovery, limitations, requirements
-- `appStore/listing-en.md` — subtitle, promotional text, description
-- `appStore/privacy-policy.md` — the privacy section
-- `assets/IgelTVRemoteIcon-1024.png` — the icon, resized into `assets/icons/`
+Everything technical on the site (supported platforms, Fire TV limitations, the
+missing interactive terminal, SSH key handling) comes from those files. If a
+claim is not in the repository, it is not on the site.
 
-If the app repo changes, update the matching sections on both pages.
+### Icons
 
-IgelNotes copy comes from `IgelNotes/DEVELOPMENT_PLAN.md` and the view/service
-names in the project (block editor, CloudKit, PencilKit drawing, App Intents,
-AI agents). Its icon was produced from a 2048 × 2048 generated image: the dark
-matte was flood-filled with the field green `#5B8360`, the result trimmed and
-exported to `assets/icons/igelnotes-{1024,512,256}.png`. The source PNG inside
-`IgelNotes/Assets.xcassets` is still the older watercolour icon.
+Each icon arrived as a 2048 × 2048 generated JPEG on a dark matte. The same
+three steps turn it into a web asset:
 
-## Things to fill in before launch
+```sh
+# 1. flood fill the dark matte with the icon's own field colour
+#    (purple #401A43 for IgelTools, green #5B8360 for IgelNotes, slate #385269 for IgelServer)
+magick source.jpg -fuzz 18% -fill '#401A43' \
+  -draw 'color 0,0 floodfill' -draw 'color 2047,0 floodfill' \
+  -draw 'color 0,2047 floodfill' -draw 'color 2047,2047 floodfill' \
+  -shave 20x20 +repage flat.png
+# 2. export
+magick flat.png -resize 1024x1024 assets/icons/<app>-1024.png
+magick flat.png -resize 512x512  assets/icons/<app>-512.png
+magick flat.png -resize 256x256  assets/icons/<app>-256.png
+```
 
-1. **GitHub links.** All `https://github.com/Chuucommie` links currently point
-   at the profile because the app repositories are private. Swap them for
-   `https://github.com/Chuucommie/IgelTVRemote` once it is public.
-2. **App Store link.** There is no listing URL yet, so the "Get the app" buttons
-   scroll to the download section instead. Replace `href="#get"` with the
-   App Store URL when it exists.
-3. **Privacy policy page.** App Store Connect needs a hosted URL. The app repo
-   has the text in `appStore/privacy-policy.md`; it needs a contact address
-   before publishing.
-4. **`IgelTVRemote/` and `IgelNotes/`** are working copies of the app repos.
-   They are already in `.gitignore`, so they will not be pushed with the site.
-5. **IgelNotes has no page yet.** It appears in the lineup and in the icon
-   section, but its card links to GitHub. The new green icon also still has a
-   German placeholder sentence in the notebook; swap in final artwork before
-   App Store submission.
+The brand icon also gets a 64 px version for the favicon. The artwork inside the
+app repositories is untouched — the source PNGs there predate these images.
+
+## Before launch
+
+1. **GitHub links.** Every `https://github.com/Chuucommie` link points at the
+   profile because the repositories are private. Swap each for its repo URL once
+   it is public.
+2. **App Store links.** No listing exists yet, so the app pages have no download
+   button. Add the URL when Igel TVRemote goes live.
+3. **Privacy policy page.** App Store Connect needs a hosted URL; the text is in
+   `IgelTVRemote/appStore/privacy-policy.md` and still needs a contact address.
+4. **IgelServer naming.** The repository is called `ServerManager` and the app
+   inside it is still named *ServerPulse* in its README. The site uses
+   **IgelServer**; rename the repo and the bundle before publishing anything.
+5. **Icon text.** The IgelNotes icon carries a German sentence in the notebook
+   and the IgelTools icon reads *Notizen*. Both are fine on the web; for the App
+   Store they should be replaced with final artwork without lettering.
 
 ## Design notes
 
-- Palette comes from the icon: blue `#216DE7`, cream `#F2E7CF`, ink `#22262D`.
+- Palette: ink background, cream text, and one accent per app — blue `#216DE7`
+  (TVRemote), green `#5B8360` (Notes), slate `#385269` (Server), purple
+  `#401A43` (IgelTools).
+- The wordmark is set in a system serif to sit with the engraved artwork; the
+  rest of the site stays in the system sans and mono.
 - Type is system stacks only, so the site has no network dependencies.
-- The "icon language" section is the rule set for future app icons: same blue
-  field, same cream engraving, same hedgehog, one prop per app.

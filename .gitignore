@@ -1,6 +1,7 @@
 # App source checkouts, kept next to the site but not part of it.
 IgelTVRemote/
 IgelNotes/
+ServerManager/
 
 # Editor and OS noise
 .DS_Store

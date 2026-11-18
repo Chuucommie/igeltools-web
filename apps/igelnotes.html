@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IgelNotes — IgelTools</title>
+<meta name="description" content="IgelNotes is a block-based notebook for iPhone, iPad and Mac: CloudKit sync, Apple Pencil drawing, Siri shortcuts and an assistant that can work on your notes.">
+<meta name="theme-color" content="#0c0e12">
+<link rel="icon" href="../assets/icons/igeltools-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="../assets/icons/igelnotes-256.png">
+<meta property="og:title" content="IgelNotes — IgelTools">
+<meta property="og:description" content="Block-based notes for iPhone, iPad and Mac.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" aria-label="IgelTools — home">
+      <img class="brand-mark" src="../assets/icons/igeltools-256.png" alt="" width="256" height="256">
+      <span class="brand-word">Igel<span>Tools</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="../index.html#apps">Apps</a>
+      <a href="../index.html#principles">Principles</a>
+      <a href="../index.html#tvs">TVs</a>
+      <a href="../index.html#platforms">Platforms</a>
+      <a class="nav-ext" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      <a class="btn btn-primary btn-sm" href="#details">Details</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">IgelTools</a>
+      <span aria-hidden="true">/</span>
+      <a href="../index.html#apps">Apps</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">IgelNotes</span>
+    </nav>
+  </div>
+
+  <section class="wrap app-hero">
+    <img class="app-hero-icon" src="../assets/icons/igelnotes-512.png" alt="IgelNotes app icon" width="176" height="176">
+    <div class="app-hero-body">
+      <p class="eyebrow"><span class="dot dot-live"></span> In development · Apple</p>
+      <h1>IgelNotes</h1>
+      <p class="lede">A block editor in the Notion mould, built on SwiftUI, SwiftData and CloudKit. Write in blocks, sketch with the Pencil, and let an assistant work on the page with you.</p>
+      <div class="app-hero-actions">
+        <a class="btn btn-blue" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
+        <a class="btn btn-ghost" href="#features">What it does</a>
+      </div>
+      <ul class="hero-meta">
+        <li>iPhone</li>
+        <li>iPad</li>
+        <li>Mac</li>
+        <li>SwiftUI · SwiftData · CloudKit</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section wrap" id="features">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="num">01</span> / What it does</p>
+      <h2>Pages made of blocks, not one long text field.</h2>
+      <p class="section-sub">Every note is a stack of independent blocks, so a page can hold prose, a table, a sketch and a code snippet without turning into a mess.</p>
+    </div>
+
+    <div class="feature-grid reveal">
+      <div class="feature">
+        <span class="feature-icon">01 · Blocks</span>
+        <h3>Every kind of block</h3>
+        <p>Text, headings, quotes, callouts, to-dos, tables, code, images, drawings and web bookmarks. Reorder them without rewriting anything.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">02 · Sync</span>
+        <h3>Sync you do not manage</h3>
+        <p>Notes are stored with SwiftData and carried between devices by CloudKit, so the page you started on the phone opens on the Mac.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">03 · Pencil</span>
+        <h3>Draw in the middle of a page</h3>
+        <p>A drawing canvas with its own toolbar, kept as a block next to the text — for diagrams, margin scribbles and handwritten lists.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">04 · Siri</span>
+        <h3>Hands-off capture</h3>
+        <p>App Intents create a note, append to one, search your notes or open a page by name, from Siri or a Shortcut. There is a shopping-list intent too.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">05 · Assistant</span>
+        <h3>KIgel, on your terms</h3>
+        <p>An assistant that can read and act on notes, using the provider you choose — Apple Intelligence, Ollama on your own machine, OpenAI or Anthropic.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">06 · Sharing</span>
+        <h3>Out of the app when you want</h3>
+        <p>Share a note or export it as a payload, including to an external agent over HTTP when you want one to take the page further.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="details">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="num">02</span> / Details</p>
+      <h2>Built on the Apple stack.</h2>
+    </div>
+
+    <dl class="facts reveal">
+      <div class="fact">
+        <dt>Platforms</dt>
+        <dd><strong>iPhone</strong> (iOS 18+), <strong>iPad</strong> (iPadOS 18+), <strong>Mac</strong> (macOS 15+) — all three share the same SwiftUI codebase</dd>
+      </div>
+      <div class="fact">
+        <dt>Built with</dt>
+        <dd>SwiftUI, SwiftData, CloudKit, PencilKit and App Intents. No web view, no cross-platform wrapper.</dd>
+      </div>
+      <div class="fact">
+        <dt>Sync</dt>
+        <dd>CloudKit for your own devices; collaboration runs through Appwrite when you switch it on.</dd>
+      </div>
+      <div class="fact">
+        <dt>Assistant</dt>
+        <dd>Provider keys are kept in the Keychain. Agents and skills decide what the assistant is allowed to change.</dd>
+      </div>
+      <div class="fact">
+        <dt>Not yet</dt>
+        <dd>Some block types and the skill manager are still moving. The App Store listing has not been written.</dd>
+      </div>
+      <div class="fact">
+        <dt>Status</dt>
+        <dd><strong>In development.</strong> The app builds and runs on device; shipping comes after Igel TVRemote.</dd>
+      </div>
+    </dl>
+
+    <div class="notice reveal">
+      <span class="dot dot-live" aria-hidden="true"></span>
+      <p><strong>Not released yet.</strong> IgelNotes is the second app in the lineup and comes after the TV remote reaches the App Store.</p>
+    </div>
+  </section>
+
+  <section class="cta wrap" id="get">
+    <div class="cta-inner reveal">
+      <img class="cta-icon" src="../assets/icons/igelnotes-256.png" alt="" width="80" height="80">
+      <div class="cta-body">
+        <h2>Notes that hold their shape.</h2>
+        <p>Development happens in the open. Follow it to see the block editor grow.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-blue" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
+        <a class="btn btn-ghost" href="../index.html#apps">All apps</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html">
+          <img class="brand-mark" src="../assets/icons/igeltools-256.png" alt="" width="256" height="256">
+          <span class="brand-word">Igel<span>Tools</span></span>
+        </a>
+        <p>Focused apps for Apple platforms and Linux, built one at a time.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h3>Apps</h3>
+          <ul>
+            <li><a href="igeltvremote.html">Igel TVRemote</a></li>
+            <li><a href="igelnotes.html">IgelNotes</a></li>
+            <li><a href="igelserver.html">IgelServer</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>This app</h3>
+          <ul>
+            <li><a href="#features">What it does</a></li>
+            <li><a href="#details">Details</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">GitHub ↗</a></li>
+            <li><a href="../index.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> IgelTools</span>
+      <span>IgelNotes</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
