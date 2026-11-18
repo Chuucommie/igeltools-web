@@ -5,10 +5,11 @@ Static marketing site for IgelTools. No build step, no dependencies: open
 
 ```
 index.html                 landing page
+404.html                   not found page (GitHub Pages picks it up)
 apps/igeltvremote.html     Igel TVRemote app page
 assets/css/style.css       all styles (design tokens at the top)
 assets/js/main.js          nav toggle, scroll reveal, footer year
-assets/icons/              app icon (1024/512/256) + brand mark + favicon
+assets/icons/              app icons (1024/512/256) + brand mark + favicon
 IgelTVRemote/              app source checkout (not part of the site)
 IgelNotes/                 app source checkout (not part of the site)
 ```
@@ -23,8 +24,24 @@ Then open <http://localhost:8000>.
 
 ## Deploy
 
-Any static host works. For GitHub Pages: push the contents of this folder to a
-repository, then Settings → Pages → deploy from branch, root.
+Live at **<https://chuucommie.github.io/igeltools-web/>**, from
+`Chuucommie/igeltools-web` (public) on the `main` branch, root folder, built by
+GitHub Pages directly — no Actions workflow.
+
+```sh
+git add -A
+git commit -m "…"
+git -c credential.helper='!gh auth git-credential' push
+```
+
+`.nojekyll` is in place so Pages serves the files as they are. `404.html` is
+served for unknown paths; it uses `<base href="/igeltools-web/">` so relative
+asset URLs resolve from the project root at any depth — change that one line if
+the site ever moves to a custom domain.
+
+The two app folders stay out of the repository via `.gitignore`. Do not upload
+this folder to a host that ignores `.gitignore` (Netlify or Cloudflare
+drag-and-drop), or the private app source goes public.
 
 ## Where the content comes from
 
