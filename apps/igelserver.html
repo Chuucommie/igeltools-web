@@ -28,8 +28,9 @@
       <a href="../index.html#principles">Principles</a>
       <a href="../index.html#tvs">TVs</a>
       <a href="../index.html#platforms">Platforms</a>
+      <a class="nav-ext" href="https://chuucommie.github.io/IgelTools-docs/apps/igelserver.html" target="_blank" rel="noreferrer">Docs <span aria-hidden="true">↗</span></a>
       <a class="nav-ext" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-      <a class="btn btn-primary btn-sm" href="#details">Details</a>
+      <a class="btn btn-primary btn-sm" href="#get">Get the app</a>
     </nav>
   </div>
 </header>
@@ -100,49 +101,16 @@
       <div class="feature">
         <span class="feature-icon">06 · Keys</span>
         <h3>Your SSH key, nothing else</h3>
-        <p>Key-based authentication with the key already on your machine. macOS keeps profiles in the Keychain; the Linux build seals its vault to the hardware.</p>
+        <p>Key-based authentication with the key already on your machine. No password in the cloud and no IgelTools account.</p>
       </div>
     </div>
-  </section>
-
-  <section class="section wrap" id="details">
-    <div class="section-head reveal">
-      <p class="eyebrow"><span class="num">02</span> / Details</p>
-      <h2>Two native builds, one server.</h2>
-    </div>
-
-    <dl class="facts reveal">
-      <div class="fact">
-        <dt>Platforms</dt>
-        <dd><strong>macOS</strong> (Swift 6, SwiftUI) and <strong>Linux</strong> (Rust, Tauri v2) for Bazzite, Fedora Atomic and Steam Deck</dd>
-      </div>
-      <div class="fact">
-        <dt>Connection</dt>
-        <dd>SSH with your own private key, usually <code>~/.ssh/id_ed25519</code>. Host and user live in a server profile you create on first launch.</dd>
-      </div>
-      <div class="fact">
-        <dt>Credentials</dt>
-        <dd>Nothing hardcoded. macOS keeps profiles in the Keychain; the Linux build encrypts its vault with AES-256-GCM and Argon2id, bound to the machine it runs on.</dd>
-      </div>
-      <div class="fact">
-        <dt>Launchpad</dt>
-        <dd>An app hub for the web interfaces you actually use — Docker tools, torrent, dashboards — opened in your default browser.</dd>
-      </div>
-      <div class="fact">
-        <dt>Not yet</dt>
-        <dd>The interactive terminal is a command runner with a timeout for now; the full PTY is on the roadmap.</dd>
-      </div>
-      <div class="fact">
-        <dt>Status</dt>
-        <dd><strong>In development.</strong> Both builds compile and are packaged automatically; nothing has been released.</dd>
-      </div>
-    </dl>
-
     <div class="notice reveal">
       <span class="dot dot-live" aria-hidden="true"></span>
-      <p><strong>Not released yet.</strong> The macOS app and the Linux bundle are built by the project's own pipeline; releases will be announced on GitHub.</p>
+      <p><strong>Agent-ready and documented.</strong> Protocols, security and the MCP tool reference live in the <a href="https://chuucommie.github.io/IgelTools-docs/apps/igelserver.html" target="_blank" rel="noreferrer">IgelTools Docs ↗</a>.</p>
     </div>
+
   </section>
+
 
   <section class="cta wrap" id="get">
     <div class="cta-inner reveal">
@@ -167,7 +135,7 @@
           <img class="brand-mark" src="../assets/icons/igeltools-256.png" alt="" width="256" height="256">
           <span class="brand-word">Igel<span>Tools</span></span>
         </a>
-        <p>Focused apps for Apple platforms and Linux, built one at a time.</p>
+        <p>Focused apps and a launcher for Apple platforms and Linux, built one at a time.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
@@ -183,7 +151,7 @@
           <h3>This app</h3>
           <ul>
             <li><a href="#features">What it does</a></li>
-            <li><a href="#details">Details</a></li>
+            <li><a href="https://chuucommie.github.io/IgelTools-docs/apps/igelserver.html" target="_blank" rel="noreferrer">Documentation ↗</a></li>
           </ul>
         </div>
         <div class="footer-col">

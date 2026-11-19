@@ -28,6 +28,7 @@
       <a href="../index.html#principles">Principles</a>
       <a href="../index.html#tvs">TVs</a>
       <a href="../index.html#platforms">Platforms</a>
+      <a class="nav-ext" href="https://chuucommie.github.io/IgelTools-docs/apps/igeltvremote.html" target="_blank" rel="noreferrer">Docs <span aria-hidden="true">↗</span></a>
       <a class="nav-ext" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
       <a class="btn btn-primary btn-sm" href="#get">Get the app</a>
     </nav>
@@ -97,7 +98,7 @@
       <div class="feature">
         <span class="feature-icon">05 · Discovery</span>
         <h3>Built for real networks</h3>
-        <p>SSDP, Bonjour and a subnet sweep run in parallel. If the router filters multicast, any protocol still accepts an address typed by hand.</p>
+        <p>It finds TVs quickly on ordinary home networks, and still accepts an address typed by hand when the router filters multicast.</p>
       </div>
       <div class="feature">
         <span class="feature-icon">06 · Standby</span>
@@ -105,6 +106,11 @@
         <p>A wake-on-LAN button for TVs that keep their network interface alive in standby — offered only where the address is known, and never on iPhone.</p>
       </div>
     </div>
+    <div class="notice reveal">
+      <span class="dot dot-live" aria-hidden="true"></span>
+      <p><strong>Agent-ready and documented.</strong> Protocols, security and the MCP tool reference live in the <a href="https://chuucommie.github.io/IgelTools-docs/apps/igeltvremote.html" target="_blank" rel="noreferrer">IgelTools Docs ↗</a>.</p>
+    </div>
+
   </section>
 
   <!-- Support -->
@@ -112,67 +118,24 @@
     <div class="section-head reveal">
       <p class="eyebrow"><span class="num">02</span> / Supported TVs</p>
       <h2>Nine platforms on your Wi-Fi.</h2>
-      <p class="section-sub">Support follows the protocol the TV speaks. Every platform below was mapped from its own pairing flow, not from a generic cast standard.</p>
+      <p class="section-sub">Support follows what the TV can do, not the logo on the box. Every platform below has its own pairing flow mapped out.</p>
     </div>
 
     <div class="brands reveal">
-      <div class="brand-cell"><strong>Samsung</strong><span>Tizen</span></div>
-      <div class="brand-cell"><strong>LG</strong><span>webOS</span></div>
-      <div class="brand-cell"><strong>Roku</strong><span>ECP</span></div>
+      <div class="brand-cell"><strong>Samsung</strong><span>Smart TV</span></div>
+      <div class="brand-cell"><strong>LG</strong><span>Smart TV</span></div>
+      <div class="brand-cell"><strong>Roku</strong><span>Streaming</span></div>
       <div class="brand-cell"><strong>Android TV</strong><span>Google TV</span></div>
       <div class="brand-cell"><strong>Vizio</strong><span>SmartCast</span></div>
-      <div class="brand-cell"><strong>Philips</strong><span>jointSPACE</span></div>
-      <div class="brand-cell"><strong>Sony</strong><span>IRCC</span></div>
-      <div class="brand-cell"><strong>Panasonic</strong><span>VIERA</span></div>
-      <div class="brand-cell is-limited"><strong>Fire TV</strong><span>Limited · ADB</span></div>
+      <div class="brand-cell"><strong>Philips</strong><span>Smart TV</span></div>
+      <div class="brand-cell"><strong>Sony</strong><span>Smart TV</span></div>
+      <div class="brand-cell"><strong>Panasonic</strong><span>Smart TV</span></div>
+      <div class="brand-cell"><strong>Fire TV</strong><span>Limited support</span></div>
     </div>
 
-    <p class="note reveal">Fire TV is marked Limited: recent Fire OS versions removed the local service third-party apps used to pair, so control falls back to ADB and needs developer options enabled on the TV. Apple TV is not supported, and neither is anything that only listens for infrared.</p>
+    <p class="note reveal">Pairing steps, ports and the Fire TV limitation are in the <a href="https://chuucommie.github.io/IgelTools-docs/apps/igeltvremote.html" target="_blank" rel="noreferrer">Igel TVRemote documentation ↗</a>. Apple TV and infrared-only remotes are not supported.</p>
   </section>
 
-  <!-- Details -->
-  <section class="section wrap" id="details">
-    <div class="section-head reveal">
-      <p class="eyebrow"><span class="num">03</span> / Details</p>
-      <h2>Requirements and habits.</h2>
-    </div>
-
-    <dl class="facts reveal">
-      <div class="fact">
-        <dt>Platforms</dt>
-        <dd><strong>iPhone</strong> (iOS 17+), <strong>Mac</strong> (macOS 13+), <strong>Apple Watch</strong> (watchOS 10+, through a paired iPhone)</dd>
-      </div>
-      <div class="fact">
-        <dt>Network</dt>
-        <dd>The TV and this device have to share a Wi-Fi network. Guest networks and VLANs isolate clients even when the name looks the same.</dd>
-      </div>
-      <div class="fact">
-        <dt>Storage</dt>
-        <dd>Pairing credentials live in the Apple Keychain, keyed to the TV and the client identity rather than to an IP address. TV names and preferences stay on the device.</dd>
-      </div>
-      <div class="fact">
-        <dt>Privacy</dt>
-        <dd>No account, no analytics, no advertising, no tracking. Requests go to the TVs on your network and nowhere else.</dd>
-      </div>
-      <div class="fact">
-        <dt>Not supported</dt>
-        <dd>Apple TV, infrared-only TVs, and TVs that are not reachable on the same network.</dd>
-      </div>
-      <div class="fact">
-        <dt>Languages</dt>
-        <dd>English and Italian, from a single shared string catalog so the apps cannot drift apart.</dd>
-      </div>
-      <div class="fact">
-        <dt>Status</dt>
-        <dd><strong>In development.</strong> Builds run on physical devices; the App Store listing is being prepared.</dd>
-      </div>
-    </dl>
-
-    <div class="notice reveal">
-      <span class="dot dot-live" aria-hidden="true"></span>
-      <p><strong>Not released yet.</strong> The iPhone, Mac and Apple Watch versions build from the repository today. Windows, Android and Linux come after 1.0.</p>
-    </div>
-  </section>
 
   <!-- Get -->
   <section class="cta wrap" id="get">
@@ -198,7 +161,7 @@
           <img class="brand-mark" src="../assets/icons/igeltools-256.png" alt="" width="256" height="256">
           <span class="brand-word">Igel<span>Tools</span></span>
         </a>
-        <p>Focused apps for Apple platforms and Linux, built one at a time.</p>
+        <p>Focused apps and a launcher for Apple platforms and Linux, built one at a time.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
@@ -215,7 +178,7 @@
           <ul>
             <li><a href="#features">What it does</a></li>
             <li><a href="#support">Supported TVs</a></li>
-            <li><a href="#details">Details</a></li>
+            <li><a href="https://chuucommie.github.io/IgelTools-docs/apps/igeltvremote.html" target="_blank" rel="noreferrer">Documentation ↗</a></li>
           </ul>
         </div>
         <div class="footer-col">

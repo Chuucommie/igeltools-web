@@ -28,6 +28,7 @@
       <a href="#principles">Principles</a>
       <a href="#tvs">TVs</a>
       <a href="#platforms">Platforms</a>
+      <a class="nav-ext" href="https://chuucommie.github.io/IgelTools-docs/" target="_blank" rel="noreferrer">Docs <span aria-hidden="true">↗</span></a>
       <!-- Point these at each repository once it is public. -->
       <a class="nav-ext" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
       <a class="btn btn-primary btn-sm" href="#apps">See the apps</a>
@@ -193,12 +194,41 @@
     </div>
   </section>
 
-  <!-- 02 · Principles -->
+  <!-- 02 · Agents -->
+  <section class="section wrap" id="agents">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="num">02</span> / Agents</p>
+      <h2>Built for agents as well as people.</h2>
+      <p class="section-sub">Every app in the suite is designed to be driven through a local Model Context Protocol server, so an assistant can do what you can do — with the same validation and the same local-first rules.</p>
+    </div>
+
+    <div class="principles reveal">
+      <div class="principle">
+        <span class="principle-num">MCP</span>
+        <h3>One server per app</h3>
+        <p>Each app exposes its own MCP server locally. No shared cloud account, no relay and no remote listener: the agent talks to the app on your machine.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">MCP</span>
+        <h3>Same powers as the window</h3>
+        <p>An agent can read state and ask for the actions the app offers, with the same checks. The tool list is the app's capability list, not a back door.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">MCP</span>
+        <h3>Approval stays with you</h3>
+        <p>Tools that change something are marked as such, so the agent host can ask before it installs, restarts or rewrites anything.</p>
+      </div>
+    </div>
+
+    <p class="note reveal">Tool schemas, security rules and client setup live in the documentation: <a href="https://chuucommie.github.io/IgelTools-docs/mcp/" target="_blank" rel="noreferrer">Read the MCP docs ↗</a>.</p>
+  </section>
+
+  <!-- 03 · Principles -->
   <section class="section wrap" id="principles">
     <div class="section-head reveal">
-      <p class="eyebrow"><span class="num">02</span> / How it is built</p>
+      <p class="eyebrow"><span class="num">03</span> / How it is built</p>
       <h2>Local, native, honest.</h2>
-      <p class="section-sub">Six habits shared by every app here, whichever machine it talks to.</p>
+      <p class="section-sub">Six habits shared by every tool here, whichever machine it talks to.</p>
     </div>
 
     <div class="principles reveal">
@@ -215,7 +245,7 @@
       <div class="principle">
         <span class="principle-num">03</span>
         <h3>Native, not wrapped</h3>
-        <p>SwiftUI on Apple platforms, Rust and Tauri on Linux. No web view pretending to be an app.</p>
+        <p>SwiftUI on Apple platforms, Rust with egui or Tauri on Linux. No web view pretending to be an app.</p>
       </div>
       <div class="principle">
         <span class="principle-num">04</span>
@@ -235,32 +265,32 @@
     </div>
   </section>
 
-  <!-- 03 · TVs -->
+  <!-- 04 · TVs -->
   <section class="section wrap" id="tvs">
     <div class="section-head reveal">
-      <p class="eyebrow"><span class="num">03</span> / Supported TVs</p>
+      <p class="eyebrow"><span class="num">04</span> / Supported TVs</p>
       <h2>Nine platforms, one remote.</h2>
-      <p class="section-sub">Inside Igel TVRemote, support follows the protocol the TV speaks, not the logo on the box. If it is on your network and speaks one of these, the app can drive it.</p>
+      <p class="section-sub">Inside Igel TVRemote, support follows what the TV can do, not the logo on the box. If it is on your network, there is a good chance the app can drive it.</p>
     </div>
 
     <div class="brands reveal">
-      <div class="brand-cell"><strong>Samsung</strong><span>Tizen</span></div>
-      <div class="brand-cell"><strong>LG</strong><span>webOS</span></div>
-      <div class="brand-cell"><strong>Roku</strong><span>ECP</span></div>
+      <div class="brand-cell"><strong>Samsung</strong><span>Smart TV</span></div>
+      <div class="brand-cell"><strong>LG</strong><span>Smart TV</span></div>
+      <div class="brand-cell"><strong>Roku</strong><span>Streaming</span></div>
       <div class="brand-cell"><strong>Android TV</strong><span>Google TV</span></div>
       <div class="brand-cell"><strong>Vizio</strong><span>SmartCast</span></div>
-      <div class="brand-cell"><strong>Philips</strong><span>jointSPACE</span></div>
-      <div class="brand-cell"><strong>Sony</strong><span>IRCC</span></div>
-      <div class="brand-cell"><strong>Panasonic</strong><span>VIERA</span></div>
-      <div class="brand-cell is-limited"><strong>Fire TV</strong><span>Limited · ADB</span></div>
+      <div class="brand-cell"><strong>Philips</strong><span>Smart TV</span></div>
+      <div class="brand-cell"><strong>Sony</strong><span>Smart TV</span></div>
+      <div class="brand-cell"><strong>Panasonic</strong><span>Smart TV</span></div>
+      <div class="brand-cell"><strong>Fire TV</strong><span>Limited support</span></div>
     </div>
-    <p class="note reveal">Fire TV is marked Limited: current Fire OS no longer lets third-party apps control the TV locally, so it needs developer options and ADB debugging switched on. Apple TV and infrared-only TVs are not supported.</p>
+    <p class="note reveal">Pairing steps, ports and the Fire TV limitation are in the <a href="https://chuucommie.github.io/IgelTools-docs/apps/igeltvremote.html" target="_blank" rel="noreferrer">Igel TVRemote documentation ↗</a>. Apple TV and infrared-only remotes are not supported.</p>
   </section>
 
-  <!-- 04 · Platforms -->
+  <!-- 05 · Platforms -->
   <section class="section wrap" id="platforms">
     <div class="section-head reveal">
-      <p class="eyebrow"><span class="num">04</span> / Platforms</p>
+      <p class="eyebrow"><span class="num">05</span> / Platforms</p>
       <h2>Apple and Linux first. Then the rest.</h2>
       <p class="section-sub">Each app reaches the machines it is meant for. Nothing is listed as available before it builds.</p>
     </div>
@@ -333,6 +363,7 @@
             <li><a href="#principles">Principles</a></li>
             <li><a href="#tvs">Supported TVs</a></li>
             <li><a href="#platforms">Platforms</a></li>
+            <li><a href="https://chuucommie.github.io/IgelTools-docs/" target="_blank" rel="noreferrer">Documentation ↗</a></li>
           </ul>
         </div>
         <div class="footer-col">
