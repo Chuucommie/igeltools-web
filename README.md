@@ -11,12 +11,14 @@ index.html                 landing page
 apps/igeltvremote.html     Igel TVRemote
 apps/igelnotes.html        IgelNotes
 apps/igelserver.html       IgelServer
+apps/igellauncher.html     IgelLauncher
 assets/css/style.css       all styles (design tokens at the top)
 assets/js/main.js          nav toggle, scroll reveal, footer year
-assets/icons/              brand icon + three app icons (1024/512/256, 64 for the favicon)
+assets/icons/              brand mark + three app icons (1024/512/256, 64 for the favicon; the launcher reuses the brand mark)
 IgelTVRemote/              app source checkout (not part of the site)
 IgelNotes/                 app source checkout (not part of the site)
 ServerManager/             app source checkout for IgelServer (not part of the site)
+IgelLauncher/              launcher source checkout (not part of the site)
 ```
 
 ## Preview locally
@@ -53,6 +55,7 @@ drag-and-drop), or the private source of the apps goes public.
 | Igel TVRemote | `IgelTVRemote/README.md`, `appStore/listing-en.md`, `appStore/privacy-policy.md` |
 | IgelNotes | `IgelNotes/DEVELOPMENT_PLAN.md` plus the `Views/`, `Services/`, `Intents/` and `Networking/` folders |
 | IgelServer | `ServerManager/README.md`, `SECURITY.md`, `docs/` |
+| IgelLauncher | `IgelLauncher/README.md`, `catalog/suite.json`, `src/` |
 
 Everything technical on the site (supported platforms, Fire TV limitations, the
 missing interactive terminal, SSH key handling) comes from those files. If a
@@ -91,7 +94,12 @@ app repositories is untouched — the source PNGs there predate these images.
 4. **IgelServer naming.** The repository is called `ServerManager` and the app
    inside it is still named *ServerPulse* in its README. The site uses
    **IgelServer**; rename the repo and the bundle before publishing anything.
-5. **Icon text.** The IgelNotes icon carries a German sentence in the notebook
+5. **Launcher releases.** IgelLauncher reads app releases from
+   `Chuucommie/igeltvremote`, `Chuucommie/igelnotes`, `Chuucommie/igelserver` and
+   its own `Chuucommie/igellauncher`. Until those repositories publish releases,
+   the site and the launcher both say so; the repository names can be changed in
+   the launcher's Settings or in `IgelLauncher/catalog/suite.json`.
+6. **Icon text.** The IgelNotes icon carries a German sentence in the notebook
    and the IgelTools icon reads *Notizen*. Both are fine on the web; for the App
    Store they should be replaced with final artwork without lettering.
 

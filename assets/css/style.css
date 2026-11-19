@@ -430,6 +430,13 @@ button { font: inherit; color: inherit; }
 .app-card--server .status-list li.is-on { border-color: rgba(159, 184, 205, 0.32); }
 .app-card--server .status-list li.is-on span { color: #9fb8cd; }
 
+.app-card--launcher {
+  background:
+    radial-gradient(120% 130% at 0% 0%, rgba(86, 128, 88, 0.3), transparent 58%),
+    linear-gradient(180deg, var(--surface), var(--bg-soft));
+}
+.app-card--launcher .app-kicker { color: var(--green-bright); }
+
 code {
   font-family: var(--mono);
   font-size: 0.86em;

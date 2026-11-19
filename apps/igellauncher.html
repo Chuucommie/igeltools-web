@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IgelLauncher — IgelTools</title>
+<meta name="description" content="IgelLauncher installs, updates and opens the IgelTools suite from one native window: the right build for your Mac or Linux machine, SHA-256 verified, with no browser in between.">
+<meta name="theme-color" content="#0c0e12">
+<link rel="icon" href="../assets/icons/igeltools-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="../assets/icons/igeltools-256.png">
+<meta property="og:title" content="IgelLauncher — IgelTools">
+<meta property="og:description" content="One native window to install, update and open the IgelTools suite.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" aria-label="IgelTools — home">
+      <img class="brand-mark" src="../assets/icons/igeltools-256.png" alt="" width="256" height="256">
+      <span class="brand-word">Igel<span>Tools</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="../index.html#apps">Apps</a>
+      <a href="../index.html#principles">Principles</a>
+      <a href="../index.html#tvs">TVs</a>
+      <a href="../index.html#platforms">Platforms</a>
+      <a class="nav-ext" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      <a class="btn btn-primary btn-sm" href="#details">Details</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">IgelTools</a>
+      <span aria-hidden="true">/</span>
+      <a href="../index.html#apps">Apps</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">IgelLauncher</span>
+    </nav>
+  </div>
+
+  <section class="wrap app-hero">
+    <img class="app-hero-icon" src="../assets/icons/igeltools-512.png" alt="IgelLauncher icon — the IgelTools hedgehog and toolbox on a green field" width="176" height="176">
+    <div class="app-hero-body">
+      <p class="eyebrow"><span class="dot dot-live"></span> In development · macOS and Linux</p>
+      <h1>IgelLauncher</h1>
+      <p class="lede">One window to install, update and open the other three. It picks the right build for your Mac or Linux machine, verifies the download, and keeps the suite current without a browser.</p>
+      <div class="app-hero-actions">
+        <a class="btn btn-green" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
+        <a class="btn btn-ghost" href="#features">What it does</a>
+      </div>
+      <ul class="hero-meta">
+        <li>macOS</li>
+        <li>Linux · Bazzite</li>
+        <li>Steam Deck</li>
+        <li>Rust · egui</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section wrap" id="features">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="num">01</span> / What it does</p>
+      <h2>The suite, in one window.</h2>
+      <p class="section-sub">The same idea as the apps themselves: one clear job, done natively. The launcher reads the suite catalog, finds what is already installed, and only offers builds that match the machine it is running on.</p>
+    </div>
+
+    <div class="feature-grid reveal">
+      <div class="feature">
+        <span class="feature-icon">01 · Catalog</span>
+        <h3>Every app in one list</h3>
+        <p>Igel TVRemote, IgelNotes and IgelServer with their descriptions, platforms and status. Switch between a card grid and a sortable table, search the suite, filter to what is installed.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">02 · Installs</span>
+        <h3>The right build, first time</h3>
+        <p>AppImage, tar.gz or DMG chosen for your operating system and processor — x86_64, Apple silicon or a universal build. No hunting through release pages.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">03 · Checksums</span>
+        <h3>Nothing unchecked</h3>
+        <p>Every download is verified against the release's published SHA-256, taken from the GitHub asset digest or its checksum file. A mismatch deletes the file and stops.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">04 · Updates</span>
+        <h3>Keeps the suite current</h3>
+        <p>Checks each app's releases, compares versions and offers one update or all of them, with a progress bar and a cancel button. Pre-releases are opt-in.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">05 · Native</span>
+        <h3>Rust and egui, no web view</h3>
+        <p>A small native window in the IgelTools colours. No Electron, no embedded browser, no account and no telemetry.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">06 · Languages</span>
+        <h3>English, Italiano, Deutsch</h3>
+        <p>Follows the system language by default, switches immediately in Settings, and remembers the choice between runs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="details">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="num">02</span> / Details</p>
+      <h2>Native, checked and honest about what is missing.</h2>
+    </div>
+
+    <dl class="facts reveal">
+      <div class="fact">
+        <dt>Platforms</dt>
+        <dd><strong>Linux</strong> (AppImage, tar.gz) and <strong>macOS</strong> (DMG, copied to <code>~/Applications</code>). Built in Rust with egui; the Linux release build compiles and runs today, macOS is the next target.</dd>
+      </div>
+      <div class="fact">
+        <dt>Install locations</dt>
+        <dd>AppImages in <code>~/Applications</code>, with a desktop entry and icon for the menu; tar.gz builds in the launcher's own data folder; DMGs mounted and copied to <code>~/Applications</code>. The path is kept in a receipt you can inspect.</dd>
+      </div>
+      <div class="fact">
+        <dt>What it finds</dt>
+        <dd>Copies installed outside the launcher, in <code>/usr/bin</code>, <code>/usr/local/bin</code>, <code>~/.local/bin</code> and the Applications folders, are shown as external. Uninstalling removes only what the launcher installed.</dd>
+      </div>
+      <div class="fact">
+        <dt>Private releases</dt>
+        <dd>While a repository is private, GitHub answers <em>404</em> and the launcher says <em>No release published yet</em>. A token can be set in Settings for private repositories and higher API limits.</dd>
+      </div>
+      <div class="fact">
+        <dt>Not yet</dt>
+        <dd>A tray icon, in-place self-update (the update is downloaded and verified, then installed from the updates folder), the web catalog, and packaged builds of the launcher itself.</dd>
+      </div>
+      <div class="fact">
+        <dt>Status</dt>
+        <dd><strong>In development.</strong> The catalog, install, checksum, update, open and uninstall paths are implemented and tested; nothing has been published yet.</dd>
+      </div>
+    </dl>
+
+    <div class="notice reveal">
+      <span class="dot dot-live" aria-hidden="true"></span>
+      <p><strong>Nothing released yet.</strong> The launcher is in the workshop with the other three. When the repositories publish their first releases, it will install them from here — checksums included.</p>
+    </div>
+  </section>
+
+  <section class="cta wrap" id="get">
+    <div class="cta-inner reveal">
+      <img class="cta-icon" src="../assets/icons/igeltools-256.png" alt="" width="80" height="80">
+      <div class="cta-body">
+        <h2>One hedgehog, four tools.</h2>
+        <p>Follow development to see the first release of the launcher and of the apps it manages.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-green" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
+        <a class="btn btn-ghost" href="../index.html#apps">All apps</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html">
+          <img class="brand-mark" src="../assets/icons/igeltools-256.png" alt="" width="256" height="256">
+          <span class="brand-word">Igel<span>Tools</span></span>
+        </a>
+        <p>Focused apps and a launcher for Apple platforms and Linux, built one at a time.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h3>Apps</h3>
+          <ul>
+            <li><a href="igeltvremote.html">Igel TVRemote</a></li>
+            <li><a href="igelnotes.html">IgelNotes</a></li>
+            <li><a href="igelserver.html">IgelServer</a></li>
+            <li><a href="igellauncher.html">IgelLauncher</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>This app</h3>
+          <ul>
+            <li><a href="#features">What it does</a></li>
+            <li><a href="#details">Details</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">GitHub ↗</a></li>
+            <li><a href="../index.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> IgelTools</span>
+      <span>IgelLauncher</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
