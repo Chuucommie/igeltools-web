@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IgelTools — Small tools that do one job well</title>
-<meta name="description" content="IgelTools builds focused apps for Apple platforms and Linux: Igel TVRemote for the TVs on your Wi-Fi, IgelNotes for everything else, IgelServer for the server in the cupboard, and IgelLauncher to keep the suite in one window.">
+<meta name="description" content="IgelTools builds focused native apps for Apple platforms: Igel TVRemote for the TVs on your Wi-Fi, IgelNotes for everything else, IgelServer for the server in the cupboard, and IgelLauncher for macOS and Linux.">
 <meta name="theme-color" content="#0c0e12">
 <link rel="icon" href="assets/icons/igeltools-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="assets/icons/igeltools-256.png">
@@ -43,7 +43,7 @@
     <div class="hero-copy">
       <p class="eyebrow"><span class="dot dot-live"></span> Three apps · one launcher</p>
       <h1>Small tools that do <em>one job</em> well.</h1>
-      <p class="lede">A remote for the TVs on your Wi-Fi, a notebook that holds everything else, a console for the server in the cupboard, and one launcher that keeps them together. Built one at a time, for Apple platforms and Linux.</p>
+      <p class="lede">A remote for the TVs on your Wi-Fi, a notebook that holds everything else, and a console for the server in the cupboard — three native Apple apps, plus one launcher for macOS and Linux that keeps them together.</p>
       <div class="hero-actions">
         <a class="btn btn-green" href="#apps">Explore the apps</a>
         <a class="btn btn-ghost" href="#principles">How it is built</a>
@@ -62,9 +62,9 @@
 
   <div class="wrap">
     <div class="strip" role="list">
-      <span role="listitem">iPhone · iPad · Mac · Watch · Linux</span>
+      <span role="listitem">iPhone · iPad · Mac · Apple Watch</span>
       <span class="strip-sep" aria-hidden="true">/</span>
-      <span role="listitem">Three apps, one launcher</span>
+      <span role="listitem">Three native Apple apps</span>
       <span class="strip-sep" aria-hidden="true">/</span>
       <span role="listitem">Built for local networks</span>
     </div>
@@ -96,9 +96,8 @@
           <li class="is-on">iPhone <span>Builds</span></li>
           <li class="is-on">Mac <span>Builds</span></li>
           <li class="is-on">Watch <span>Builds</span></li>
-          <li>Windows <span>Planned</span></li>
-          <li>Android <span>Planned</span></li>
-          <li>Linux <span>Planned</span></li>
+          <li>Apple TV <span>Not supported</span></li>
+          <li>Windows · Android · Linux <span>Not planned</span></li>
         </ul>
         <a class="btn btn-primary btn-block" href="apps/igeltvremote.html">Explore Igel TVRemote <span aria-hidden="true">→</span></a>
         <a class="link-quiet" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
@@ -113,7 +112,7 @@
         <div>
           <p class="app-kicker">Writing and thinking</p>
           <h3 class="app-title">IgelNotes</h3>
-          <p class="app-desc">A block editor in the Notion mould, built for the Apple stack. Pages made of blocks, CloudKit sync, Apple Pencil drawing and Siri shortcuts — plus an assistant that can work on your notes.</p>
+          <p class="app-desc">A block editor in the Notion mould, native on iPhone, iPad and Mac. Twenty-one block types, Pencil drawing, Siri shortcuts and KIgel, an assistant that works with the AI provider you choose. Notes stay in a local SwiftData store and sync through your own Appwrite instance while CloudKit is on the way.</p>
         </div>
       </div>
 
@@ -123,9 +122,8 @@
           <li class="is-on">iPhone <span>Target</span></li>
           <li class="is-on">iPad <span>Target</span></li>
           <li class="is-on">Mac <span>Target</span></li>
-          <li>Windows <span>Planned</span></li>
-          <li>Android <span>Planned</span></li>
-          <li>Linux <span>Planned</span></li>
+          <li>CloudKit sync <span>Planned</span></li>
+          <li>Windows · Android · Linux <span>Not planned</span></li>
         </ul>
         <a class="btn btn-primary btn-block" href="apps/igelnotes.html">Explore IgelNotes <span aria-hidden="true">→</span></a>
         <a class="link-quiet" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
@@ -140,7 +138,7 @@
         <div>
           <p class="app-kicker">Server control</p>
           <h3 class="app-title">IgelServer</h3>
-          <p class="app-desc">A remote console for a headless Linux server. Live telemetry, systemd units, Docker containers and qBittorrent over SSH — from a Mac, or from a Steam Deck on the sofa.</p>
+          <p class="app-desc">A native macOS and iOS console for a headless Linux server. Live telemetry, systemd units, Docker containers, logs and qBittorrent over SSH — with credentials kept in a local vault.</p>
         </div>
       </div>
 
@@ -148,8 +146,9 @@
         <span class="badge"><span class="dot dot-live"></span> In development</span>
         <ul class="status-list">
           <li class="is-on">macOS <span>Builds</span></li>
-          <li class="is-on">Linux <span>Builds</span></li>
-          <li>Windows <span>Planned</span></li>
+          <li class="is-on">iPhone · iPad <span>Builds</span></li>
+          <li class="is-on">Linux server <span>Supported</span></li>
+          <li>Windows <span>Not planned</span></li>
         </ul>
         <a class="btn btn-primary btn-block" href="apps/igelserver.html">Explore IgelServer <span aria-hidden="true">→</span></a>
         <a class="link-quiet" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
@@ -188,8 +187,8 @@
       </div>
       <div class="ghost-card">
         <span class="ghost-tag">Later</span>
-        <h4>More versions of the ones that exist.</h4>
-        <p>Windows and Android are planned after the Apple and Linux versions settle. The finished build gets copied, not guessed.</p>
+        <h4>Apple first, and only.</h4>
+        <p>There is no Windows or Android port in the plan for the three apps: IgelNotes and IgelServer are native Swift, and Igel TVRemote covers Mac, iPhone and Watch. New work goes into those, not into ports.</p>
       </div>
     </div>
   </section>
@@ -199,28 +198,28 @@
     <div class="section-head reveal">
       <p class="eyebrow"><span class="num">02</span> / Agents</p>
       <h2>Built for agents as well as people.</h2>
-      <p class="section-sub">Every app in the suite is designed to be driven through a local Model Context Protocol server, so an assistant can do what you can do — with the same validation and the same local-first rules.</p>
+      <p class="section-sub">Where an app exposes itself to automation, it uses Apple's own surfaces: App Intents for Siri, Shortcuts and Focus, plus the AI provider you choose. There is no proprietary agent endpoint, and MCP is the next step, not a shipping feature.</p>
     </div>
 
     <div class="principles reveal">
       <div class="principle">
-        <span class="principle-num">MCP</span>
-        <h3>One server per app</h3>
-        <p>Each app exposes its own MCP server locally. No shared cloud account, no relay and no remote listener: the agent talks to the app on your machine.</p>
+        <span class="principle-num">Intents</span>
+        <h3>App Intents, not a secret API</h3>
+        <p>IgelNotes can create, append to, search and open notes from Siri or Shortcuts. IgelServer exposes a dashboard refresh to Siri AI. The actions are declared by the app itself, not hidden behind a private endpoint.</p>
+      </div>
+      <div class="principle">
+        <span class="principle-num">Keys</span>
+        <h3>Your provider, your key</h3>
+        <p>KIgel speaks to Apple Intelligence, Ollama, OpenAI or Anthropic. Provider keys stay in the Keychain; there is no shared account and no relay of ours in the middle.</p>
       </div>
       <div class="principle">
         <span class="principle-num">MCP</span>
-        <h3>Same powers as the window</h3>
-        <p>An agent can read state and ask for the actions the app offers, with the same checks. The tool list is the app's capability list, not a back door.</p>
-      </div>
-      <div class="principle">
-        <span class="principle-num">MCP</span>
-        <h3>Approval stays with you</h3>
-        <p>Tools that change something are marked as such, so the agent host can ask before it installs, restarts or rewrites anything.</p>
+        <h3>MCP is still ahead</h3>
+        <p>A local MCP server is the intended way to give an agent the same powers as the window. It is not in a shipping app yet, so nothing on this site claims it is.</p>
       </div>
     </div>
 
-    <p class="note reveal">Tool schemas, security rules and client setup live in the documentation: <a href="https://chuucommie.github.io/IgelTools-docs/mcp/" target="_blank" rel="noreferrer">Read the MCP docs ↗</a>.</p>
+    <p class="note reveal">How each app exposes itself to automation, and what is still missing, lives in the documentation: <a href="https://chuucommie.github.io/IgelTools-docs/" target="_blank" rel="noreferrer">Read the IgelTools Docs ↗</a>.</p>
   </section>
 
   <!-- 03 · Principles -->
@@ -235,17 +234,17 @@
       <div class="principle">
         <span class="principle-num">01</span>
         <h3>Local first</h3>
-        <p>The TVs are on your network, the server is a box you own, the notes sit in your own iCloud. Nothing takes a detour through a relay of ours.</p>
+        <p>The TVs are on your network, the server is a box you own, the notes sit in a local SwiftData store. Nothing takes a detour through a relay of ours — IgelNotes syncs only with an Appwrite instance you host.</p>
       </div>
       <div class="principle">
         <span class="principle-num">02</span>
         <h3>No IgelTools account</h3>
-        <p>Nothing to register. The apps work with the machines and accounts you already have: your Wi-Fi, your SSH key, your iCloud.</p>
+        <p>Nothing to register with us. The apps work with what you already have: your Wi-Fi, your SSH key, your Appwrite instance, your AI provider key.</p>
       </div>
       <div class="principle">
         <span class="principle-num">03</span>
         <h3>Native, not wrapped</h3>
-        <p>SwiftUI on Apple platforms, Rust with egui or Tauri on Linux. No web view pretending to be an app.</p>
+        <p>SwiftUI on Apple platforms, Rust with egui for the Linux launcher. No web view pretending to be an app.</p>
       </div>
       <div class="principle">
         <span class="principle-num">04</span>
@@ -255,7 +254,7 @@
       <div class="principle">
         <span class="principle-num">05</span>
         <h3>Honest about limits</h3>
-        <p>Fire TV is marked Limited, Apple TV is out of scope, the interactive terminal is not wired up yet. The apps say so instead of pretending.</p>
+        <p>Fire TV is marked Limited, Apple TV is out of scope, CloudKit is not active yet, and the SSH console is not a full interactive terminal. The apps say so instead of pretending.</p>
       </div>
       <div class="principle">
         <span class="principle-num">06</span>
@@ -291,8 +290,8 @@
   <section class="section wrap" id="platforms">
     <div class="section-head reveal">
       <p class="eyebrow"><span class="num">05</span> / Platforms</p>
-      <h2>Apple and Linux first. Then the rest.</h2>
-      <p class="section-sub">Each app reaches the machines it is meant for. Nothing is listed as available before it builds.</p>
+      <h2>Native Apple apps, with a Linux launcher.</h2>
+      <p class="section-sub">The three apps are built for Apple platforms and tested there. Linux appears in the suite through IgelLauncher, sized for Bazzite and the Steam Deck. Nothing is listed as available before it builds.</p>
     </div>
 
     <div class="roadmap reveal">
@@ -303,21 +302,21 @@
       </div>
       <div class="roadmap-row is-now">
         <span class="roadmap-name">Linux</span>
-        <span class="roadmap-meta">Bazzite · Steam Deck</span>
+        <span class="roadmap-meta">Bazzite · Steam Deck · launcher</span>
         <span class="roadmap-state">In development</span>
       </div>
       <div class="roadmap-row">
         <span class="roadmap-name">Windows</span>
-        <span class="roadmap-meta">Desktop</span>
+        <span class="roadmap-meta">Launcher only</span>
         <span class="roadmap-state">Planned</span>
       </div>
       <div class="roadmap-row">
         <span class="roadmap-name">Android</span>
-        <span class="roadmap-meta">Phones and tablets</span>
-        <span class="roadmap-state">Planned</span>
+        <span class="roadmap-meta">No port scheduled</span>
+        <span class="roadmap-state">Not planned</span>
       </div>
     </div>
-    <p class="note reveal">Where an app goes next depends on the app: the TV remote belongs on a phone or a wrist, the server console belongs where the keyboard is.</p>
+    <p class="note reveal">IgelNotes and IgelServer are native Swift; Igel TVRemote compiles for macOS, iOS and watchOS. Windows and Android are not in the plan for these apps.</p>
   </section>
 
   <!-- CTA -->
@@ -326,7 +325,7 @@
       <img class="cta-icon" src="assets/icons/igeltools-256.png" alt="" width="80" height="80">
       <div class="cta-body">
         <h2>One hedgehog, four tools.</h2>
-        <p>A remote, a notebook, a server console and the launcher that keeps them together. All in development and all built the same way.</p>
+        <p>A remote, a notebook, a server console and the launcher that keeps them together. All in development and all native.</p>
       </div>
       <div class="cta-actions">
         <a class="btn btn-green" href="#apps">See the apps</a>

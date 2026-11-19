@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IgelServer — IgelTools</title>
-<meta name="description" content="IgelServer is a remote console for a headless Linux server: live telemetry, systemd, Docker and qBittorrent over SSH, on macOS and on Steam Deck.">
+<meta name="description" content="IgelServer is a native macOS and iOS console for a headless Linux server: live telemetry, systemd, Docker, logs and qBittorrent over SSH.">
 <meta name="theme-color" content="#0c0e12">
 <link rel="icon" href="../assets/icons/igeltools-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="../assets/icons/igelserver-256.png">
 <meta property="og:title" content="IgelServer — IgelTools">
-<meta property="og:description" content="A remote console for a headless Linux server, over SSH.">
+<meta property="og:description" content="Native macOS and iOS apps for a headless Linux server, over SSH.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -49,17 +49,17 @@
   <section class="wrap app-hero">
     <img class="app-hero-icon" src="../assets/icons/igelserver-512.png" alt="IgelServer app icon" width="176" height="176">
     <div class="app-hero-body">
-      <p class="eyebrow"><span class="dot dot-live"></span> In development · macOS and Linux</p>
+      <p class="eyebrow"><span class="dot dot-live"></span> In development · macOS and iOS</p>
       <h1>IgelServer</h1>
-      <p class="lede">A remote console for a headless Linux server. Telemetry, systemd units, Docker containers and qBittorrent over SSH — from a Mac, or from a Steam Deck.</p>
+      <p class="lede">A remote console for a headless Linux server, as a native app on your Mac, iPhone and iPad. Telemetry, systemd units, Docker containers, logs and qBittorrent over SSH — with credentials kept on the device.</p>
       <div class="app-hero-actions">
         <a class="btn btn-green" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
         <a class="btn btn-ghost" href="#features">What it does</a>
       </div>
       <ul class="hero-meta">
         <li>macOS</li>
-        <li>Linux · Bazzite</li>
-        <li>Steam Deck</li>
+        <li>iOS 27</li>
+        <li>iPhone · iPad</li>
         <li>SSH</li>
       </ul>
     </div>
@@ -94,19 +94,19 @@
         <p>Talk to the qBittorrent WebUI directly: upload .torrent files, normalise magnet links, and keep the queue moving.</p>
       </div>
       <div class="feature">
-        <span class="feature-icon">05 · Two builds</span>
-        <h3>Mac and Deck, same idea</h3>
-        <p>A SwiftUI app for macOS and a Rust and Tauri build for Bazzite and Steam Deck, sized for 1280×800 and navigable with the gamepad.</p>
+        <span class="feature-icon">05 · Two clients</span>
+        <h3>Mac and iOS, not a port</h3>
+        <p>A Swift 6 + SwiftUI app for macOS and a separate iOS 27 client with Liquid Glass, touch-first tabs and layouts for iPhone and iPad. Both talk to the same server, and a dashboard refresh is available to Siri and Shortcuts.</p>
       </div>
       <div class="feature">
-        <span class="feature-icon">06 · Keys</span>
-        <h3>Your SSH key, nothing else</h3>
-        <p>Key-based authentication with the key already on your machine. No password in the cloud and no IgelTools account.</p>
+        <span class="feature-icon">06 · Credentials</span>
+        <h3>Secrets stay on the device</h3>
+        <p>An AES-256-GCM vault on the Mac, Secure Enclave and Keychain on the iPhone, and trust-on-first-use host-key pinning on iOS. No password in the cloud and no IgelTools account.</p>
       </div>
     </div>
     <div class="notice reveal">
       <span class="dot dot-live" aria-hidden="true"></span>
-      <p><strong>Agent-ready and documented.</strong> Protocols, security and the MCP tool reference live in the <a href="https://chuucommie.github.io/IgelTools-docs/apps/igelserver.html" target="_blank" rel="noreferrer">IgelTools Docs ↗</a>.</p>
+      <p><strong>Documented.</strong> Setup, security model, iOS SSH details and current limits live in the <a href="https://chuucommie.github.io/IgelTools-docs/apps/igelserver.html" target="_blank" rel="noreferrer">IgelTools Docs ↗</a>.</p>
     </div>
 
   </section>
@@ -116,8 +116,8 @@
     <div class="cta-inner reveal">
       <img class="cta-icon" src="../assets/icons/igelserver-256.png" alt="" width="80" height="80">
       <div class="cta-body">
-        <h2>Your server, one window away.</h2>
-        <p>Follow development to see the Linux build and the macOS app land together.</p>
+        <h2>Your server, one app away.</h2>
+        <p>Follow development to see the macOS and iOS clients land together.</p>
       </div>
       <div class="cta-actions">
         <a class="btn btn-green" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
