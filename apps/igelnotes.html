@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IgelNotes — IgelTools</title>
-<meta name="description" content="IgelNotes is a block-based notebook for iPhone, iPad and Mac: 21 block types, Pencil drawing, Siri shortcuts, KIgel AI and sync through your own Appwrite instance.">
+<meta name="description" content="IgelNotes is a block-based notebook for iPhone, iPad and Mac. Version 1.0 is available for macOS: 21 block types, Pencil drawing, Siri, KIgel AI and sync through your own Appwrite instance.">
 <meta name="theme-color" content="#0c0e12">
 <link rel="icon" href="../assets/icons/igeltools-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="../assets/icons/igelnotes-256.png">
 <meta property="og:title" content="IgelNotes — IgelTools">
-<meta property="og:description" content="Block-based notes for iPhone, iPad and Mac, with a local store and your own sync.">
+<meta property="og:description" content="Block-based notes for iPhone, iPad and Mac. Version 1.0 for macOS.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -27,7 +27,7 @@
       <a href="../index.html#apps">Apps</a>
       <a href="../index.html#principles">Principles</a>
       <a href="../index.html#tvs">TVs</a>
-      <a href="../index.html#platforms">Platforms</a>
+      <a href="../index.html#use">In use</a>
       <a class="nav-ext" href="https://chuucommie.github.io/IgelTools-docs/apps/igelnotes.html" target="_blank" rel="noreferrer">Docs <span aria-hidden="true">↗</span></a>
       <a class="nav-ext" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
       <a class="btn btn-primary btn-sm" href="#get">Get the app</a>
@@ -49,18 +49,18 @@
   <section class="wrap app-hero">
     <img class="app-hero-icon" src="../assets/icons/igelnotes-512.png" alt="IgelNotes app icon" width="176" height="176">
     <div class="app-hero-body">
-      <p class="eyebrow"><span class="dot dot-live"></span> In development · Apple</p>
+      <p class="eyebrow"><span class="dot dot-live"></span> 1.0 for macOS · iPhone and iPad in development</p>
       <h1>IgelNotes</h1>
-      <p class="lede">A block editor in the Notion mould, native on iPhone, iPad and Mac with SwiftUI and SwiftData. Write in blocks, sketch with the Pencil, and let KIgel work on the page with the AI provider you choose.</p>
+      <p class="lede">A notebook for pages that hold more than text. Write in blocks, sketch with the Pencil, find everything later, and let KIgel help with the page using the AI service you already trust.</p>
       <div class="app-hero-actions">
-        <a class="btn btn-green" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
+        <a class="btn btn-green" href="https://github.com/Chuucommie/IgelTools-Releases/releases/tag/igelnotes-v1.0.0" target="_blank" rel="noreferrer">Download for macOS ↗</a>
         <a class="btn btn-ghost" href="#features">What it does</a>
       </div>
       <ul class="hero-meta">
-        <li>iPhone</li>
-        <li>iPad</li>
-        <li>Mac</li>
-        <li>SwiftUI · SwiftData</li>
+        <li>Blocks</li>
+        <li>Pencil</li>
+        <li>Siri</li>
+        <li>KIgel</li>
       </ul>
     </div>
   </section>
@@ -79,9 +79,9 @@
         <p>Twenty-one block types: headings, text, to-dos, toggles, quotes, callouts, tables, code, drawings, images, sub-pages, media and web bookmarks. Reorder them without rewriting anything.</p>
       </div>
       <div class="feature">
-        <span class="feature-icon">02 · Sync</span>
-        <h3>Sync on your terms</h3>
-        <p>Notes live in a local SwiftData store. Today they sync through an Appwrite instance you run; CloudKit is the declared next step, and neither route passes through an IgelTools server.</p>
+        <span class="feature-icon">02 · Organise</span>
+        <h3>Find it later</h3>
+        <p>Workspaces, favourites, tags, templates and sub-pages keep a growing notebook navigable. The trash holds deleted notes before they go for good.</p>
       </div>
       <div class="feature">
         <span class="feature-icon">03 · Pencil</span>
@@ -91,22 +91,22 @@
       <div class="feature">
         <span class="feature-icon">04 · Siri</span>
         <h3>Hands-off capture</h3>
-        <p>App Intents create a note, append to one, search your notes or open a page by name, from Siri or a Shortcut. There is a shopping-list intent too.</p>
+        <p>Create a note, append to one, search your notes or open a page by name from Siri or a Shortcut. There is a shopping-list shortcut too.</p>
       </div>
       <div class="feature">
         <span class="feature-icon">05 · Assistant</span>
-        <h3>KIgel, on your terms</h3>
-        <p>An assistant that can read and act on notes, using the provider you choose — Apple Intelligence, Ollama on your own machine, OpenAI or Anthropic.</p>
+        <h3>KIgel, and the assistants you use</h3>
+        <p>KIgel works with Apple Intelligence, Ollama, OpenAI or Anthropic. On the Mac, Claude Desktop, Cursor and Zed can also read or edit notes through a permission profile you choose.</p>
       </div>
       <div class="feature">
-        <span class="feature-icon">06 · Structure</span>
-        <h3>Structure that holds</h3>
-        <p>Workspaces, favourites, tags, templates, sub-pages and a trash that hides notes before deleting them. The sidebar stays a list, not a maze.</p>
+        <span class="feature-icon">06 · Sync</span>
+        <h3>Your notes, your service</h3>
+        <p>Notes stay on your device and can sync through the Appwrite instance you run. Nothing is parked in an IgelTools account.</p>
       </div>
     </div>
     <div class="notice reveal">
       <span class="dot dot-live" aria-hidden="true"></span>
-      <p><strong>Documented.</strong> App Intents, provider setup, storage and the roadmap to MCP live in the <a href="https://chuucommie.github.io/IgelTools-docs/apps/igelnotes.html" target="_blank" rel="noreferrer">IgelTools Docs ↗</a>.</p>
+      <p><strong>Documented.</strong> How to set up KIgel, sync and the Siri shortcuts is in the <a href="https://chuucommie.github.io/IgelTools-docs/apps/igelnotes.html" target="_blank" rel="noreferrer">IgelTools Docs ↗</a>.</p>
     </div>
 
   </section>
@@ -117,10 +117,10 @@
       <img class="cta-icon" src="../assets/icons/igelnotes-256.png" alt="" width="80" height="80">
       <div class="cta-body">
         <h2>Notes that hold their shape.</h2>
-        <p>Development happens in the open. Follow it to see the block editor grow.</p>
+        <p>Version 1.0 is out for macOS. Follow development for the iPhone and iPad release.</p>
       </div>
       <div class="cta-actions">
-        <a class="btn btn-green" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
+        <a class="btn btn-green" href="https://github.com/Chuucommie/IgelTools-Releases/releases/tag/igelnotes-v1.0.0" target="_blank" rel="noreferrer">Download for macOS ↗</a>
         <a class="btn btn-ghost" href="../index.html#apps">All apps</a>
       </div>
     </div>
@@ -135,7 +135,7 @@
           <img class="brand-mark" src="../assets/icons/igeltools-256.png" alt="" width="256" height="256">
           <span class="brand-word">Igel<span>Tools</span></span>
         </a>
-        <p>Focused apps and a launcher for Apple platforms and Linux, built one at a time.</p>
+        <p>Focused apps for your TV, your notes and your server.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">

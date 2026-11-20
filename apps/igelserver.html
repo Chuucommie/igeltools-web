@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IgelServer — IgelTools</title>
-<meta name="description" content="IgelServer is a native macOS and iOS console for a headless Linux server: live telemetry, systemd, Docker, logs and qBittorrent over SSH.">
+<meta name="description" content="IgelServer is a macOS and iOS app for the server in your home: a live overview, services, Docker, logs and qBittorrent, from your Mac, iPhone or iPad.">
 <meta name="theme-color" content="#0c0e12">
 <link rel="icon" href="../assets/icons/igeltools-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="../assets/icons/igelserver-256.png">
 <meta property="og:title" content="IgelServer — IgelTools">
-<meta property="og:description" content="Native macOS and iOS apps for a headless Linux server, over SSH.">
+<meta property="og:description" content="A live overview, services, Docker and qBittorrent, from your Mac, iPhone or iPad.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -27,7 +27,7 @@
       <a href="../index.html#apps">Apps</a>
       <a href="../index.html#principles">Principles</a>
       <a href="../index.html#tvs">TVs</a>
-      <a href="../index.html#platforms">Platforms</a>
+      <a href="../index.html#use">In use</a>
       <a class="nav-ext" href="https://chuucommie.github.io/IgelTools-docs/apps/igelserver.html" target="_blank" rel="noreferrer">Docs <span aria-hidden="true">↗</span></a>
       <a class="nav-ext" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
       <a class="btn btn-primary btn-sm" href="#get">Get the app</a>
@@ -49,18 +49,18 @@
   <section class="wrap app-hero">
     <img class="app-hero-icon" src="../assets/icons/igelserver-512.png" alt="IgelServer app icon" width="176" height="176">
     <div class="app-hero-body">
-      <p class="eyebrow"><span class="dot dot-live"></span> In development · macOS and iOS</p>
+      <p class="eyebrow"><span class="dot dot-live"></span> In development · Mac, iPhone and iPad</p>
       <h1>IgelServer</h1>
-      <p class="lede">A remote console for a headless Linux server, as a native app on your Mac, iPhone and iPad. Telemetry, systemd units, Docker containers, logs and qBittorrent over SSH — with credentials kept on the device.</p>
+      <p class="lede">The server in the cupboard, without the terminal. See what the machine is doing, restart a service, manage a container, check the download queue or open a self-hosted app — from your Mac, iPhone or iPad.</p>
       <div class="app-hero-actions">
         <a class="btn btn-green" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
         <a class="btn btn-ghost" href="#features">What it does</a>
       </div>
       <ul class="hero-meta">
-        <li>macOS</li>
-        <li>iOS 27</li>
-        <li>iPhone · iPad</li>
-        <li>SSH</li>
+        <li>At a glance</li>
+        <li>Services</li>
+        <li>Docker</li>
+        <li>qBittorrent</li>
       </ul>
     </div>
   </section>
@@ -69,44 +69,44 @@
     <div class="section-head reveal">
       <p class="eyebrow"><span class="num">01</span> / What it does</p>
       <h2>The server in the cupboard, without the terminal.</h2>
-      <p class="section-sub">Everything goes over one multiplexed SSH connection to the host you already administer. There is no agent to install on the server and no service of ours in between.</p>
+      <p class="section-sub">All the information you need to know whether the machine is happy, in one place, with the actions you reach for most often.</p>
     </div>
 
     <div class="feature-grid reveal">
       <div class="feature">
-        <span class="feature-icon">01 · Telemetry</span>
-        <h3>Watch the machine breathe</h3>
-        <p>CPU, memory, swap, disk usage, uptime and live network throughput, polled every few seconds and drawn as sparklines and gauges.</p>
+        <span class="feature-icon">01 · At a glance</span>
+        <h3>See the whole machine</h3>
+        <p>Processor, memory, swap, disks, uptime and network traffic, refreshed while you watch. Ask Siri for a refresh when you want the latest picture.</p>
       </div>
       <div class="feature">
         <span class="feature-icon">02 · Services</span>
-        <h3>Systemd without the pager</h3>
-        <p>Start, stop and restart units, see which ones failed, and read journalctl logs inside the app instead of scrolling a terminal.</p>
+        <h3>Services without the pager</h3>
+        <p>Start, stop and restart the services you run, see which ones failed, and read the logs in the app instead of scrolling a terminal.</p>
       </div>
       <div class="feature">
         <span class="feature-icon">03 · Containers</span>
         <h3>Docker, one press at a time</h3>
-        <p>Bring containers up and down, restart them, and follow the logs while they boot — no compose file editing to check on a service.</p>
+        <p>Bring containers up and down, restart them, and follow the logs while they boot. No other tool open just to check on a service.</p>
       </div>
       <div class="feature">
         <span class="feature-icon">04 · Torrents</span>
         <h3>qBittorrent in the same window</h3>
-        <p>Talk to the qBittorrent WebUI directly: upload .torrent files, normalise magnet links, and keep the queue moving.</p>
+        <p>Talk to qBittorrent directly: add .torrent files, normalise magnet links and keep the queue moving.</p>
       </div>
       <div class="feature">
-        <span class="feature-icon">05 · Two clients</span>
-        <h3>Mac and iOS, not a port</h3>
-        <p>A Swift 6 + SwiftUI app for macOS and a separate iOS 27 client with Liquid Glass, touch-first tabs and layouts for iPhone and iPad. Both talk to the same server, and a dashboard refresh is available to Siri and Shortcuts.</p>
+        <span class="feature-icon">05 · Server apps</span>
+        <h3>Your self-hosted apps, one click away</h3>
+        <p>When the server runs web apps beside their containers, the Mac app lists them in one place and opens them for you.</p>
       </div>
       <div class="feature">
-        <span class="feature-icon">06 · Credentials</span>
-        <h3>Secrets stay on the device</h3>
-        <p>An AES-256-GCM vault on the Mac, Secure Enclave and Keychain on the iPhone, and trust-on-first-use host-key pinning on iOS. No password in the cloud and no IgelTools account.</p>
+        <span class="feature-icon">06 · Private</span>
+        <h3>Your details stay yours</h3>
+        <p>Your sign-in details stay on your device and nothing is installed on the server. Claude Desktop, Cursor and Zed can read the same health, containers and queue, with write actions only if you enable them.</p>
       </div>
     </div>
     <div class="notice reveal">
       <span class="dot dot-live" aria-hidden="true"></span>
-      <p><strong>Documented.</strong> Setup, security model, iOS SSH details and current limits live in the <a href="https://chuucommie.github.io/IgelTools-docs/apps/igelserver.html" target="_blank" rel="noreferrer">IgelTools Docs ↗</a>.</p>
+      <p><strong>Documented.</strong> Setup, security and what the app can do on each screen are in the <a href="https://chuucommie.github.io/IgelTools-docs/apps/igelserver.html" target="_blank" rel="noreferrer">IgelTools Docs ↗</a>.</p>
     </div>
 
   </section>
@@ -116,8 +116,8 @@
     <div class="cta-inner reveal">
       <img class="cta-icon" src="../assets/icons/igelserver-256.png" alt="" width="80" height="80">
       <div class="cta-body">
-        <h2>Your server, one app away.</h2>
-        <p>Follow development to see the macOS and iOS clients land together.</p>
+        <h2>The server, without the terminal.</h2>
+        <p>Follow development for the next release.</p>
       </div>
       <div class="cta-actions">
         <a class="btn btn-green" href="https://github.com/Chuucommie" target="_blank" rel="noreferrer">Follow on GitHub ↗</a>
@@ -135,7 +135,7 @@
           <img class="brand-mark" src="../assets/icons/igeltools-256.png" alt="" width="256" height="256">
           <span class="brand-word">Igel<span>Tools</span></span>
         </a>
-        <p>Focused apps and a launcher for Apple platforms and Linux, built one at a time.</p>
+        <p>Focused apps for your TV, your notes and your server.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
